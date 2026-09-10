@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Weather App</h1>
+            <form id="search-form">
+                <input type="text" id="location-input" placeholder="Enter location..." required>
+                <button type="submit">Search</button>
+            </form>
+        </header>
+
+        <!-- Loading Component -->
+        <div id="loading" class="hidden">
+            <p>Fetching weather data...</p>
+        </div>
+        
+        <!-- Weather Display Component -->
+        <main id="weather-display" class="hidden">
+            <h2 id="location-name"></h2>
+            
+            <!-- Weather icon -->
+            <img id="weather-icon" src="" alt="Weather icon"> 
+            
+            <p id="weather-condition"></p>
+            
+            <div class="temp-container">
+                <span id="temperature"></span>
+                <button id="unit-toggle">Toggle °C / °F</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Note: type="module" allows for top-level await and dynamic imports if you use Webpack later -->
+    <script src="main.js" type="module"></script>
+</body>
+</html>
